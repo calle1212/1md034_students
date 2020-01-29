@@ -11,10 +11,12 @@ body {
 
 .burgers_section{
     background-color: black;
-    color: white;    
+    color: white;
+    border: dashed 3px white;
 }
 
 .info_section{
+    border: dashed 3px black;
 
 }
 
