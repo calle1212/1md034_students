@@ -1,5 +1,6 @@
 
 body {
+    margin: 0 auto;
     font-family: Tahoma, sans-serif;
     font-size: 1.25em;
 }
@@ -23,4 +24,9 @@ button:hover {
     font-size: 1.25em;
     cursor: pointer;
 
+}
+
+table{
+    margin: 0  auto;
+    width: 85%;
 }
