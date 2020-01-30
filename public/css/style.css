@@ -13,11 +13,14 @@ body {
     background-color: black;
     color: white;
     border: dashed 3px white;
+    padding: 20px;
+    margin-left: 25px;
 }
 
 .info_section{
     border: dashed 3px black;
-
+    padding: 20px;
+    margin-left: 25px;
 }
 
 button{
@@ -38,14 +41,15 @@ table{
 
 
 section{
-    margin-left: 25px;
+   
     margin-right: 25px;
-    padding: 20px;;
+
 }
 
 
 
 header{
+    margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
     height: 319px;
@@ -72,4 +76,17 @@ header img{
     width: 100%;
     height: auto;
 }
+
+.wrapper {
+     display: grid;
+     grid-gap: 50px;
+     grid-template-columns: 474px 474px 474px;
+     margin: 0  auto;
+     width: 85%;
+}
+
+
+ .box {
+     border-radius: 5px;
+ }
 
