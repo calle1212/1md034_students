@@ -24,8 +24,51 @@ menuItem4 = new menuItem("burg", "...it's a burger", 1100, false, false, false, 
 menuItem5 = new menuItem("Crab burger", "this burger is best eaten underwater", 750, false, true, false, "img/burg3.jpeg");
 
 
+///////
+
   document.getElementById("b1").innerHTML  = menuItem1.name;
   document.getElementById("b2").innerHTML  = menuItem2.name;
   document.getElementById("b3").innerHTML  = menuItem3.name;
   document.getElementById("b4").innerHTML  = menuItem4.name;
   document.getElementById("b5").innerHTML  = menuItem5.name;
+
+/*
+ ______HTML CODE____
+<div id="myID">
+    <h1>Välj en burgare</h1>
+    <p id="b1"> {{ burgerName }} </p>
+    <p id="b2"> {{ burgerName }}</p>
+    <p id="b3"> {{ burgerName }}</p>
+    <p id="b4">{{ burgerName }} </p>
+    <p id="b5"> {{ burgerName }} </p>
+
+</div>
+
+*/
+
+///////
+
+
+//simple for-loop
+let i = 0;
+for (i; i < 5; i++) {
+    var para = document.createElement("p");
+
+	  let string  = "";
+    string = burgers[i].name;
+
+    if(burgers[i].lactose){
+        string = string + "\n - contains: Lactose";
+    }
+
+    if(burgers[i].gluten){
+        string = string + "\n - contains: Gluten";
+    }
+
+    var node = document.createTextNode(string);
+
+    para.appendChild(node);
+
+    var element = document.getElementById("myID");
+    element.appendChild(para);
+}

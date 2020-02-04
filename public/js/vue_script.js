@@ -53,3 +53,43 @@ const vm5 = new Vue({
 </div>
 
 */
+
+
+
+
+let menu = [menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
+
+
+var loop = new Vue({
+  el: '#burgers',
+  data: {
+   menu 
+  }
+})
+
+
+
+/*
+ ___________HTML CODE, LOOP_____
+
+ <div id="myID">
+    <h1>Välj en burgare</h1>
+    <p> original text  </p>
+
+     <ul id="burgers">
+     <li v-for="burger in menu">
+     {{ burger.name }}
+     <ul>
+     <li v-if="burger.lactose"> 
+         Contains <b>Lactose</b>
+     </li>
+        <li v-if="burger.gluten"> 
+         Contains <b>Gluten</b>
+     </li>
+     </ul>
+     </li>
+     </ul>
+
+  </div>
+
+*/
