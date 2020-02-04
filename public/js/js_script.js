@@ -22,3 +22,10 @@ menuItem2 = new menuItem("Homeboy burger", "For the homeboys ONLY", 2300, false,
 menuItem3 = new menuItem("Classy burger", "made for the burger connoisseur", 1000, false, false, true, "img/burg3.jpeg");
 menuItem4 = new menuItem("burg", "...it's a burger", 1100, false, false, false, "img/burg3.jpeg");
 menuItem5 = new menuItem("Crab burger", "this burger is best eaten underwater", 750, false, true, false, "img/burg3.jpeg");
+
+
+  document.getElementById("b1").innerHTML  = menuItem1.name;
+  document.getElementById("b2").innerHTML  = menuItem2.name;
+  document.getElementById("b3").innerHTML  = menuItem3.name;
+  document.getElementById("b4").innerHTML  = menuItem4.name;
+  document.getElementById("b5").innerHTML  = menuItem5.name;
