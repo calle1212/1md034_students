@@ -1,3 +1,5 @@
+
+/*
 const vm = new Vue({
   el: '#myID',
   data: {
@@ -52,7 +54,7 @@ const vm5 = new Vue({
 
 </div>
 
-*/
+^/
 
 
 
@@ -72,24 +74,30 @@ var loop = new Vue({
 /*
  ___________HTML CODE, LOOP_____
 
- <div id="myID">
+<div id="myID">
     <h1>Välj en burgare</h1>
     <p> original text  </p>
 
      <ul id="burgers">
-     <li v-for="burger in menu">
-     {{ burger.name }}
-     <ul>
-     <li v-if="burger.lactose"> 
-         Contains <b>Lactose</b>
-     </li>
-        <li v-if="burger.gluten"> 
-         Contains <b>Gluten</b>
-     </li>
-     </ul>
-     </li>
+       <li v-for="burger in menu">
+         {{ burger.name }}
+           <ul>
+           <li>
+             Kcal: {{ burger.kcal }}
+           </li>
+           <li v-if="burger.lactose"> 
+               Contains <b>Lactose</b>
+           </li>
+              <li v-if="burger.gluten"> 
+               Contains <b>Gluten</b>
+           </li>
+           </ul>
+     
+         </li>
      </ul>
 
   </div>
+
+^/
 
 */

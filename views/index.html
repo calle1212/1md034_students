@@ -4,10 +4,11 @@
     <title>Homeburgers'</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8"/>
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script> 
+
     
+    <script src="js/js_script.js" defer></script>
+    
+
   </head>
   
 
@@ -17,7 +18,7 @@
       <h1>Welcome to Homeburger's </h1>
      <b> <i>We deliver our hamburgers home to you </i></b>
       
-      <img src = "img/header.jpg" id="header_pic">
+      <img src = "img/header.jpg" id="header_pic" alt="header">
     </header>
     
     <main>
@@ -27,80 +28,20 @@
         
         <i><b> Please select a burger</b> </i>
 
-        <div class="wrapper">
-         
-            
-            <div class="box a">
+        <div id="grid">
+          
 
-              <h4>Big boy burger</h4>
-              <img src = "img/burg1.jpeg"alt="the big boy burger" height="316" width="474vw" title="burg1">
-
-              <ul>
-                <li>tasty burger made for big boys</li>
-                <section class="allergy">
-                  <li>not vegetarian</li>
-                  <li>not gluten free</li>
-                </section>
-              </ul>
-              
-            </div>
-            
-            
-
-            
-            <div class="box b">
-              
-              
-              <h4>Homeboy burger</h4>
-              <img src = "img/burg2.jpg"alt="the homeboy burger"height="316" width="474" title="burg1">
-              <ul>
-                <li>Our biggest burger, made for homeboys</li>
-                <section class="allergy">                  
-                  <li>meaty </li>
-                  <li>not gluten free</li>
-                </section>
-              </ul>
-              
-            </div>
-            
-            
-            
-            <div class="box c">
-              
-              <h4>Classy burger</h4>
-              <img src = "img/burg3.jpg"alt="the classy burger" height="316" width="474" title="burg1">
-              <dl>
-                <dt>Ingredients </dt>
-                <dd><ul>
-                    <li>salad</li>
-                    <li>meat</li>
-                    <li>bread</li>
-                    <li>tomato</li>
-                  </ul>
-                </dd>
-                
-                
-                <dt>Calories</dt>
-                <dd>1000</dd>
-
-                <section class="allergy">                  
-                  <dt>Vegetarian?</dt>
-                  <dd>no</dd>
-
-                  <dt>Gluten free?</dt>
-                  <dd>no</dd>
-                  
-                  <dt>Lactose free?</dt>
-                  <dd>no</dd>
-                </section>
-                
-              </dl>
-              
-            </div>
-            
+   
+          
+          
         </div>
         
       </section>
+
+
+
+
+      
       
       <section class ="info_section">
         <h3>Customer information</h3>
@@ -108,8 +49,8 @@
         
         <form>
           <p>
-            <label for="Full name">Full name</label><br>
-            <input type="text" id="full name" name="fn" required="required" placeholder="First- and Last name" />
+            <label for="full_name">Full name</label><br>
+            <input type="text" id="full_name" name="fn" required="required" placeholder="First- and Last name" />
           </p>
           <p>
             <label for="email">E-mail address</label><br>
@@ -127,8 +68,8 @@
 
 
           <p>
-            <label for="payment option">Payment Option</label><br />
-            <select id="payment option" name="pay">
+            <label for="payment_option">Payment Option</label><br />
+            <select id="payment_option" name="pay">
               
               <option>Cheque</option>
               <option selected = "selected">Credit Card</option>    <option>Cash</option>
@@ -149,7 +90,7 @@
         
       </section>
 
-      <button type="submit"><img src="img/smallburg2.jpg" /> Send Info</button>
+      <button type="submit"><img src="img/smallburg2.jpg" alt="small burger"/> Send Info</button>
       
     </main>
     <footer>copyright 2020</footer>  
