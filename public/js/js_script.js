@@ -30,7 +30,7 @@ menuItem5 = new menuItem("Crab burger", "this burger is best eaten underwater", 
 
 //let grid = document.getElementByID("grid");
 
-
+/*
 
 //document.getElementById("grid").innerHTML  = "öööööööööööööö";
 

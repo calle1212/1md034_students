@@ -4,9 +4,15 @@
     <title>Homeburgers'</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8"/>
+    <script src="https://vuejs.org/js/vue.js" defer></script> 
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer ></script>
 
     
-    <script src="js/js_script.js" defer></script>
+   
+    
+    
+   
     
 
   </head>
@@ -16,7 +22,7 @@
 
     <header>
       <h1>Welcome to Homeburger's </h1>
-     <b> <i>We deliver our hamburgers home to you </i></b>
+      <b> <i>We deliver our hamburgers home to you </i></b>
       
       <img src = "img/header.jpg" id="header_pic" alt="header">
     </header>
@@ -28,10 +34,37 @@
         
         <i><b> Please select a burger</b> </i>
 
-        <div id="grid">
+        <div id="grid" class="wrapper">
+          
           
 
-   
+          <div v-for="burger in menu">
+            <h3> {{ burger.name }} </h3>
+
+            <img v-bind:src="burger.picFilePath" height="316px" width="474px">
+          
+         
+            <ul>
+              <li>
+                {{burger.description}}
+              </li>
+              <li>
+                {{burger.kcal}} kcal
+              </li>
+              <li v-if="burger.vegetarian">
+                is Vegetarian
+              </li>
+              <li v-else>
+                is <b>not Vegetarian </b>
+              </li>
+              <li v-if="burger.lactose">
+                contains <b>Lactose</b>
+              </li>
+              <li v-if="burger.gluten">
+                contains <b>Gluten</b>
+              </li>
+              
+          
           
           
         </div>

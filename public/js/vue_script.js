@@ -40,7 +40,7 @@ const vm5 = new Vue({
   }
 })
 
-
+*/
 
 /*
  ______HTML CODE____
@@ -54,20 +54,39 @@ const vm5 = new Vue({
 
 </div>
 
-^/
+*/
+
 
 
 
 
 let menu = [menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
 
-
+/*
 var loop = new Vue({
-  el: '#burgers',
+    el: '#grid',
   data: {
    menu 
   }
 })
+*/
+/*
+const vm5 = new Vue({
+  el: '#burger2',
+  data: {
+      burger: menu[1]
+  }
+})
+*/
+
+
+const burgerz = new Vue({
+  el: '#grid',
+  data: {
+      menu: menu
+  }
+})
+
 
 
 
