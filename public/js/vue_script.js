@@ -60,7 +60,7 @@ const vm5 = new Vue({
 
 
 
-let menu = [menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
+//let menu = [menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
 
 /*
 var loop = new Vue({
@@ -83,7 +83,7 @@ const vm5 = new Vue({
 const burgerz = new Vue({
   el: '#grid',
   data: {
-      menu: menu
+      menu: food
   }
 })
 

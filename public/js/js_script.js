@@ -1,4 +1,5 @@
 
+/*
 function menuItem(name, description, kcal, vegetarian, gluten, lactose, picFilePath) {
     this.name = name; // The this keyword refers to the object itself
     this.description = description;
@@ -13,7 +14,7 @@ function menuItem(name, description, kcal, vegetarian, gluten, lactose, picFileP
 this.prototype.picFilePath = function() {
     return this.picFilePath;
 }
-*/
+/^
 this.nameAndKcal = function(){
     return this.name + ' ' + this.kcal;
 }
@@ -24,7 +25,7 @@ menuItem2 = new menuItem("Homeboy burger", "For the homeboys ONLY", 2300, false,
 menuItem3 = new menuItem("Classy burger", "made for the burger connoisseur", 1000, false, false, true, "img/burg3.jpg");
 menuItem4 = new menuItem("Burg", "...it's a burger", 1100, false, false, false, "img/burg4.jpg");
 menuItem5 = new menuItem("Crab burger", "this burger is best eaten underwater", 750, true, true, false, "img/burg5.jpg");
-
+*/
 
 
 
