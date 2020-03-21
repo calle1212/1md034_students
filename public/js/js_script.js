@@ -1,4 +1,9 @@
 
+
+
+
+
+
 /*
 function menuItem(name, description, kcal, vegetarian, gluten, lactose, picFilePath) {
     this.name = name; // The this keyword refers to the object itself
@@ -185,5 +190,31 @@ for (i; i < 5; i++) {
 */
 
 
+/*
+
+let myButton = document.getElementById('send_order');
+
+myButton.onclick = function () {
+    console.log("Button clicked!");
+    var name = document.getElementById('full_name').value;
+    var email = document.getElementById('email').value;
+    var street = document.getElementById('street').value;
+    var house = document.getElementById('house').value;
+    var pay_op = document.getElementById('payment_option').value;
+    var gender = document.forms.my_form.elements.gender.value;
 
 
+    
+/ *
+    console.log(email);
+    console.log(street);
+    console.log(house);
+    console.log(pay_op);
+    console.log(gender2);
+* /
+    var arr =  [name, email, street, house, pay_op, gender];
+
+    return arr; 
+}
+
+*/

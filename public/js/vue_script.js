@@ -80,15 +80,63 @@ const vm5 = new Vue({
 */
 
 
+
+/*
 const burgerz = new Vue({
   el: '#grid',
   data: {
-      menu: food
+      
+  
   }
 })
+*/
 
+const info = new Vue({
+    el: '#main',
+    data: {
+        menu: food,
+        
+        vburgers: [],
+       
+        vname: '',
+        vemail: '',
+        vstreet: '',
+        vhouse: '',
+        vpay_op: 'Credit Card',
+        vgender: 'Male',
+         
+        
+        clicked: false
+    },
+    
+  methods: {
+        buttonClicked: function() {
+            console.log("button clicked!");
+            /*
+            console.log("name: " + this.vname);
+            console.log("email: " + this.vemail);
+            console.log("street: " + this.vstreet);
+            console.log("house: " + this.vstreet);
+            console.log("pay_op: " + this.vpay_op);
+            console.log("gender: " + this.vgender);
+            console.log("burgers: " + this.vburgers);
 
+            console.log(this.clicked);
+            */
+            this.clicked = !this.clicked;
+            
+       
+        },
+      fakeSend: function() {
+          alert("Order Sent!");
+          location.reload(); 
 
+          
+      }
+      
+  }
+})
+                        
 
 /*
  ___________HTML CODE, LOOP_____
