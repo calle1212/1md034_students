@@ -145,7 +145,14 @@ const info = new Vue({
         local_order: {
           //  orderId: 'T',
             details: {x: 0, y: 0},
-            orderItems: []
+            orderItems: [],
+            person_details: [
+                this.vname,
+                this.vemail,
+                this.vpay_op,
+                this.vgender,
+                
+            ]
         },
         
         get_next: 0,
@@ -168,7 +175,11 @@ const info = new Vue({
 
                   console.log(this.clicked);
                 */
+
+                
+                
                 this.clicked = !this.clicked;
+                
                 
                 
             },
@@ -192,21 +203,19 @@ const info = new Vue({
                  * The click event object contains among other things different
                  * coordinates that we need when calculating where in the map the click
                  * actually happened. */
+                
             
                 socket.emit('addOrder', {
                     orderId: this.getNext(),
                     details: this.local_order.details,
-                    orderItems: this.local_order.orderItems,
+                    orderItems: this.vburgers,
+                    person_details:  [this.vname, this.vemail, this.vgender, this.vpay_op],
+                    
                 });
             },
 
 
             displayOrder:  function(event) {
-                /* When you click in the map, a click event object is sent as parameter
-                 * to the function designated in v-on:click (i.e. this one).
-                 * The click event object contains among other things different
-                 * coordinates that we need when calculating where in the map the click
-                 * actually happened. */
                 let offset = {
                     x: event.currentTarget.getBoundingClientRect().left,
                     y: event.currentTarget.getBoundingClientRect().top,
@@ -217,10 +226,13 @@ const info = new Vue({
                         x: event.clientX - 10 - offset.x,
                         y: event.clientY - 10 - offset.y,
                     },
-                    orderItems: this.vburgers,
+      
                 };
 
                 console.log(this.local_order.details.x +"," + this.local_order.details.y );
+                console.log(this.local_order.person_details);
+
+                
             }
             
         }
