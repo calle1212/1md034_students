@@ -4,10 +4,12 @@
     <title>Homeburgers'</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8"/>
+    <script src="/socket.io/socket.io.js" defer></script>
+
     <script src="https://vuejs.org/js/vue.js" defer></script>
-       <script src="js/vue_script.js" defer ></script>
+    <script src="js/vue_script.js" defer ></script>
     <script type="text/javascript" src="js/menu.js"></script>
-   
+    
     <script src="js/js_script.js" defer></script>
   
 
@@ -106,6 +108,8 @@
             <label for="email" >E-mail address</label><br>
             <input type="email" id="email" name="em" required="required"  placeholder="E-mail address"  v-model="vemail" />
           </p>
+
+          <!--
           <p>
             <label for="street">Street</label><br>
             <input type="text" id="street" name="street"   placeholder="Street name"  v-model="vstreet" />
@@ -115,8 +119,11 @@
             <label for="house">House</label><br>
             <input type="number" id="house" name="hnr" required="required"   placeholder="House number" v-model="vhouse"/>
           </p>
+          -->
 
 
+  
+          
           <p>
             <label for="payment_option" >Payment Option</label><br/>
             <select id="payment_option"  name="pay" v-model="vpay_op">
@@ -144,7 +151,15 @@
             
           </p>
 
-                      
+          <div class="view-box">
+            <div id="dots" v-on:click="addOrder">
+              <div 
+                v-for="(order, key) in orders"
+                v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                {{key}}
+              </div>
+            </div>
+          </div>    
           
         </form>
         
@@ -162,7 +177,7 @@
         <h2>Your Order</h2>
         <p> Name: {{vname}} </p>
         <p> Email: {{vemail}} </p>
-        <p> Address: {{vstreet}} {{vhouse}}</p>
+       <!-- <p> Address: {{vstreet}} {{vhouse}}</p> -->
         <p> Payment Option: {{vpay_op}} </p>
         <p> Gender: {{vgender}} </p>
 
