@@ -152,11 +152,11 @@
           </p>
 
           <div class="view-box">
-            <div id="dots" v-on:click="addOrder">
+            <div id="dots" v-on:click="displayOrder">
               <div 
-                v-for="(order, key) in orders"
-                v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                {{key}}
+             
+                v-bind:style="{ left: local_order.details.x + 'px', top: local_order.details.y + 'px'}">
+                T
               </div>
             </div>
           </div>    
@@ -187,7 +187,7 @@
           
         
         
-        <button v-on:click="fakeSend();">SEND</button>
+        <button v-on:click="addOrder();">SEND</button>
       </div>
 
 
